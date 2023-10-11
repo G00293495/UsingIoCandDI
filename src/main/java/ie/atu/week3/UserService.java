@@ -1,6 +1,7 @@
 package ie.atu.week3;
 
 
+import ie.atu.libraryservice.LibraryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,9 +15,10 @@ public class UserService {
         this.emailService = emailService;
     }
 
-    public void registerUser(String name, String email){
+    public void registerUser(String name, String email) {
 
         emailService.sendEmail(email, "Welcome to our platform!");
     }
 }
+
 
